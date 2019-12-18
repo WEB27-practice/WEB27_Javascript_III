@@ -171,3 +171,124 @@
 // let money = 100;
 
 // console.log(money); 
+
+// Prototypes + Constructor Functions
+// constructor function can construct new object - that's it's whole purpose 
+// A few key differences 
+// this
+// missing a return 
+// Capitalized function name
+
+
+
+// const petOne = {
+//     name: 'Ada',
+//     species: 'Bali Dog',
+//     pronoun: 'she',
+//     favFood:'Salmon',
+//     eat: function(){
+//         console.log(`${this.name} is a ${this.species} and ${this.pronoun} likes to eat ${this.favFood}`);
+//     }
+// }
+
+// const petTwo = {
+//     name: 'Chi Chi',
+//     species: 'Shiba Inu',
+//     pronoun: 'she',
+//     favFood:'Salmon',
+//     eat: function(){
+//         console.log(`${this.name} is a ${this.species} and ${this.pronoun} likes to eat ${this.favFood}`);
+//     }
+// }
+
+// const petThree = {
+//     name: 'Mushu',
+//     species: 'cat',
+//     pronoun: 'she',
+//     favFood:'chicken',
+//     eat: function(){
+//         console.log(`${this.name} is a ${this.species} and ${this.pronoun} likes to eat ${this.favFood}`);
+//     }
+// }
+
+// const petFour = {
+//     name: 'Snow',
+//     species: 'bunny',
+//     pronoun: 'he',
+//     favFood:'Cabbage',
+//     eat: function(){
+//         console.log(`${this.name} is a ${this.species} and ${this.pronoun} likes to eat ${this.favFood}`);
+//     }
+// }
+
+function Pet(attributes){
+    this.newName = attributes.name,
+    this.newSpecies = attributes.species,
+    this.newPronoun = attributes.pronoun,
+    this.newFavFood = attributes.favFood,
+    this.newPhrase = attributes.phrase,
+    this.newToy = attributes.toy  
+  }
+  
+  Pet.prototype.eat = function(){
+    return `${this.newName} is a ${this.newSpecies} and ${this.newPronoun} likes to eat ${this.newFavFood}`;
+  }
+  Pet.prototype.speak = function(){
+    return `${this.newName} says ${this.newPhrase}`;
+  }
+  Pet.prototype.play = function(){
+    return `${this.newName} plays with ${this.newToy}`;
+  }
+  const petOne = new Pet({
+    name: 'Ada',
+    species: 'Bali Dog',
+    pronoun: 'she',
+    favFood:'Salmon',
+    phrase: 'woof woof',
+    toy: 'stuffed squrriel'
+  });
+  
+  const petTwo = new Pet({
+    name: 'Chi Chi',
+    species: 'Shiba Inu',
+    pronoun: 'she',
+    favFood:'Salmon',
+    phrase: 'bark bark',
+    toy: 'stuffed bear',
+  }); 
+  
+  const petThree = new Pet({
+    name: 'Mushu',
+    species: 'cat',
+    pronoun: 'she',
+    favFood:'chicken',
+    phrase: 'mew mew',
+    toy: 'toy mouse',
+  });
+    
+  const petFour = new Pet({
+    name: 'Snow',
+    species: 'bunny',
+    pronoun: 'he',
+    favFood:'Cabbage',
+    phrase: 'screech roar!',
+    toy: 'wheel',
+  }); 
+  
+  console.log(petOne.eat());
+  console.log(petTwo.eat());
+  console.log(petThree.eat());
+  console.log(petFour.eat());
+  console.log(petOne.speak());
+  console.log(petTwo.speak());
+  console.log(petThree.speak());
+  console.log(petFour.speak());
+  console.log(petOne.play());
+  console.log(petTwo.play());
+  console.log(petThree.play());
+  console.log(petFour.play());
+  
+  // prototypical inheritence 
+  // arrays can do everything functions can do and everything objects can do
+  //functions can do everything objects can do 
+  // everything in JavaScript is an object 
