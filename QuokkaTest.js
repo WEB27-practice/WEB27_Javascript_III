@@ -118,3 +118,15 @@ ghost.call(otherGhost); // invoking function, to see Fatso's boo
 const friendlyGhost = ghost.bind(myGhost);
 
 friendlyGhost();
+
+// quokka practice
+
+const name = {
+    name: 'Sean',
+    age: 29,
+}
+
+console.log(name.name) // Sean
+console.log(name.age) // 29
+
+
