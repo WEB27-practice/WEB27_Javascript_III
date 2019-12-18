@@ -98,35 +98,76 @@
 // all of the above allow us to explicity state what the 'this' keyword is referring to 
 
 // call 
-function ghost(){
-    console.log(this.boo);
-}
+// function ghost(){
+//     console.log(this.boo);
+// }
 
-let myGhost = {
-    name: 'Casper',
-    boo: '👻 boooo!'
-}
+// let myGhost = {
+//     name: 'Casper',
+//     boo: '👻 boooo!'
+// }
 
-let otherGhost = {
-    name: 'Fatso',
-    boo: '😡👻 boo!'
-}
+// let otherGhost = {
+//     name: 'Fatso',
+//     boo: '😡👻 boo!'
+// }
 
-ghost.call(myGhost); // invoking function, to see Casper's boo
-ghost.call(otherGhost); // invoking function, to see Fatso's boo
+// ghost.call(myGhost); // invoking function, to see Casper's boo
+// ghost.call(otherGhost); // invoking function, to see Fatso's boo
 
-const friendlyGhost = ghost.bind(myGhost);
+// const friendlyGhost = ghost.bind(myGhost);
 
-friendlyGhost();
+// friendlyGhost();
 
-// quokka practice
+// // quokka practice
 
-const name = {
-    name: 'Sean',
-    age: 29,
-}
+// const name = {
+//     name: 'Sean',
+//     age: 29,
+// }
 
-console.log(name.name) // Sean
-console.log(name.age) // 29
+// console.log(name.name) // Sean
+// console.log(name.age) // 29
+
+// function callOfTheWild(){
+//     console.log(`${this.name} says ${this.sound}`);
+// }
+
+// const animal = {
+//     name: 'Noa',
+//     species: 'Bali Dog',
+//     sound: 'bark bark'
+// }
+
+// callOfTheWild.call(animal);
+
+// function Ghost(saying){
+//     this.phrase = saying;
+// }
+
+// let myGhost = new Ghost('Casper the friendly 👻');
+
+// console.log(myGhost.phrase); // function is being invoked 
+
+// function Food(favorite){
+//     this.dish = favorite;
+// }
+
+// let myFood = new Food('Latin cooking');
+
+// console.log(myFood.dish);
+
+// Britt's example
+// function Food(favorite) {
+//     this.food = favorite;
+// }
+
+// let myFavoriteFood = new Food('Ethiopian');
+
+// console.log(`My favorite food is ${myFavoriteFood.food}`); 
 
 
+// another quokka test - doesn't work with symbols, rather words. 
+// let money = 100;
+
+// console.log(money); 
